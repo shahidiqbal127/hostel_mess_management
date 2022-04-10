@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X_UA-Compatible" content="ie-edge">
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script> src='main.js'</script>
+    
+</head>
+
+<body>
+
+    <form method="post" action="register">
+        {% csrf_token %}
+       
+        {{form.as_p}}
+        <input type= "Submit">
+    
+    </form>
+
+</body>
+
+</html>
