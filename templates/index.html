@@ -31,16 +31,16 @@
 							<div class="logo"><a href="index.html">Mess Management<br><h5>Student Hostels</h5></a></div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li class="active"><a href="index.html">Home</a></li>
+									<li class="active"><a href="/">Home</a></li>
 									{% if user.is_authenticated %}
+									<li class="scroll-to-section"><a href="#top" class="active">{{ user.username}}</a></li>
 									<li><a href="accounts/logout">logout</a></li>
 									{% else %}
-									<li><a href="accounts/register">Register</a></li>
-									<li><a href="accounts/login">Login</a></li>
+									<li><a href="accounts/student_register">Register</a></li>
+									<li><a href="accounts/login_request">Login</a></li>
 									{% endif %}
-									<li><a href="news.html">Menu</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="contact.html">About</a></li>
+									<li><a href="menu">Menu</a></li>
+									<li><a href="about">About</a></li>
 								</ul>
 							</nav>
 							

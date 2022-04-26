@@ -1,13 +1,38 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+#from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Student
 
 
-class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField()
-    first_name = forms.CharField()
-    last_name = forms.CharField()
+class StudentSignUpForm(forms.ModelForm):
+    
+    Password = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                "class":"form-control"
+            }
+        )
+    )
+    
 
     class Meta:
-        model = User
-        fields = ['username', 'email','first_name','last_name', 'password1','password2']
+        model = Student
+        fields = [
+            'Username',
+            'First_name',
+            'Last_name',
+            'Password',
+            'Regnum',
+            'Email',
+            'Gender',
+            'Room_no',
+            'Phone_no',
+            'hostel']
+
+
+class LoginForm(forms.ModelForm):
+    class Meta:
+        model = Student
+        fields = [
+            'Username',
+            'Password']

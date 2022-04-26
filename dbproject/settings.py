@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'travello',
+    'mess_management',
     'accounts.apps.AccountsConfig',
 ]
 
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'dbproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_project',
+        'NAME': 'mess_management',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',

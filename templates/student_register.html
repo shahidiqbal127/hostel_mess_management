@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form </title>
+    <link rel="stylesheet" href="{%static 'css/register.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Student Registration</div>
+    <div class="content">
+      <form action="" method='post'>
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Username</span>
+            {{ form.Username }}
+          </div>
+          <div class="input-box">
+            <span class="details">Registration Number</span>
+            {{ form.Regnum }}
+          </div>
+          <div class="input-box">
+            <span class="details">First Name</span>
+            {{ form.First_name }}
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            {{ form.Last_name }}
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            {{ form.Email }}
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            {{ form.Phone_no }}
+          </div>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            {{ form.Gender }}
+          </div>
+          <div class="input-box">
+            <span class="details">Room Number</span>
+            {{ form.Room_no }}
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            {{ form.Password }}
+          </div>
+          <div class="input-box">
+            <span class="details">Hostel</span>
+            {{ form.hostel }}
+          </div>
+        </div>
+        
+        <div class="button">
+          <input type="submit" value="Register Now">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
